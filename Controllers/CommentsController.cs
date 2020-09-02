@@ -36,20 +36,55 @@ namespace BloggerAPI.Controllers
 
         // POST api/<CommentsController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Comment comment)
         {
+            try
+            {
+                _context.Comments.Add(comment);
+                _context.SaveChanges();
+                return Ok("Comment added successfully");
+            }
+            catch(Exception e)
+            {
+                return BadRequest("Comment could not be added\n"+e);
+            }
         }
 
         // PUT api/<CommentsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] Comment comment)
         {
+            try
+            {
+                Comment c = _context.Comments.Find(id);
+                c.Content = comment.Content;
+                c.DateOfPublish = comment.DateOfPublish;
+                c.Username = comment.Username;
+                c.BlogId = comment.BlogId;
+                _context.Comments.Update(c);
+                _context.SaveChanges();
+                return Ok("Comment Updated");
+            }
+            catch (Exception e)
+            {
+                return BadRequest("Comment could not be updated\n" + e);
+            }
         }
 
         // DELETE api/<CommentsController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            try
+            {
+                _context.Comments.Remove(_context.Comments.Find(id));
+                _context.SaveChanges();
+                return Ok("Comment deleted");
+            }
+            catch (Exception e)
+            {
+                return BadRequest("Comment could not be deleted\n" + e);
+            }
         }
     }
 }

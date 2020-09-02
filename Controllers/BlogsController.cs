@@ -61,7 +61,7 @@ namespace BloggerAPI.Controllers
                 b.DateOfPublish = blog.DateOfPublish;
                 b.Type = blog.Type;
                 b.Username = blog.Username;
-                _context.Update(b);
+                _context.Blogs.Update(b);
                 _context.SaveChanges();
                 return Ok("Blog Updated");
             }
