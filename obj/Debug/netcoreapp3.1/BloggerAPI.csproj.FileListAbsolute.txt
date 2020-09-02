@@ -54,8 +54,13 @@ D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.csproj.CoreCompileInputs.cache
-D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.dll
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.pdb
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.genruntimeconfig.cache
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.csproj.CoreCompileInputs.cache
+D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cache
