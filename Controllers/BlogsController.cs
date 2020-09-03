@@ -57,7 +57,7 @@ namespace BloggerAPI.Controllers
             try
             {
                 Blog b = _context.Blogs.Find(id);
-                b.Content = blog.Content;
+                b.Description = blog.Description;
                 b.DateOfPublish = blog.DateOfPublish;
                 b.Type = blog.Type;
                 b.Username = blog.Username;

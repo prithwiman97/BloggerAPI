@@ -4,14 +4,16 @@ using BloggerAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BloggerAPI.Migrations
 {
     [DbContext(typeof(BloggerContext))]
-    partial class BloggerContextModelSnapshot : ModelSnapshot
+    [Migration("20200903071435_ModifiedBlogTable")]
+    partial class ModifiedBlogTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

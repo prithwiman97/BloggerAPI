@@ -26,11 +26,11 @@ namespace BloggerAPI.Controllers
         }
 
         // GET api/<CommentsController>/5
-        [HttpGet("{blogId}")]
-        public IEnumerable<Comment> Get(int blogId)
+        [HttpGet("{postId}")]
+        public IEnumerable<Comment> Get(int postId)
         {
             IEnumerable<Comment> comments = _context.Comments.ToList();
-            comments = from c in comments where c.BlogId == blogId select c;
+            comments = from c in comments where c.PostId == postId select c;
             return comments;
         }
 
@@ -60,7 +60,7 @@ namespace BloggerAPI.Controllers
                 c.Content = comment.Content;
                 c.DateOfPublish = comment.DateOfPublish;
                 c.Username = comment.Username;
-                c.BlogId = comment.BlogId;
+                c.PostId = comment.PostId;
                 _context.Comments.Update(c);
                 _context.SaveChanges();
                 return Ok("Comment Updated");

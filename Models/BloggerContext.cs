@@ -14,6 +14,7 @@ namespace BloggerAPI.Models
 
         public DbSet<Users> Users { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogPost> BlogPosts { get; set; }
         public DbSet<Comment> Comments { get; set; }
     }
 }
