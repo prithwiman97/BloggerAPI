@@ -52,14 +52,39 @@ namespace BloggerAPI.Controllers
 
         // PUT api/<BlogPostsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] BlogPost post)
         {
+            BlogPost p = _context.BlogPosts.Find(id);
+            p.Title = post.Title;
+            p.Content = post.Content;
+            p.DateOfPublish = post.DateOfPublish;
+            p.BlogId = post.BlogId;
+            try
+            {
+                _context.BlogPosts.Update(p);
+                _context.SaveChanges();
+                return Ok("Post updated successfully");
+            }
+            catch(Exception e)
+            {
+                return BadRequest("Post could not be updated\n" + e);
+            }
         }
 
         // DELETE api/<BlogPostsController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            try
+            {
+                _context.BlogPosts.Remove(_context.BlogPosts.Find(id));
+                _context.SaveChanges();
+                return Ok("Post deleted successfully");
+            }
+            catch(Exception e)
+            {
+                return BadRequest("Post could not be deleted\n" + e);
+            }
         }
     }
 }
