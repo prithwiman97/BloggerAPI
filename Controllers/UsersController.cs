@@ -27,16 +27,9 @@ namespace BloggerAPI.Controllers
 
         // GET api/<UsersController>/abcd123
         [HttpGet("{username}")]
-        public IActionResult Get(string username,[FromBody] string password)
+        public Users Get(string username)
         {
-            Users u = _context.Users.Find(username);
-            if(u != null)
-            {
-                if (u.Password == password)
-                    return Ok(u);
-                return BadRequest("Invalid Password");
-            }
-            return BadRequest("User does not exist");
+            return _context.Users.Find(username);
         }
 
         // POST api/<UsersController>

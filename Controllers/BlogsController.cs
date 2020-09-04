@@ -26,12 +26,10 @@ namespace BloggerAPI.Controllers
         }
 
         // GET api/<BlogsController>/abcd123
-        [HttpGet("{username}")]
-        public IEnumerable<Blog> Get(string username)
+        [HttpGet("{id}")]
+        public Blog Get(int id)
         {
-            IEnumerable<Blog> blogs = _context.Blogs.ToList();
-            blogs = from b in blogs where b.Username == username select b;
-            return blogs;
+            return _context.Blogs.Find(id);
         }
 
         // POST api/<BlogsController>
@@ -57,6 +55,7 @@ namespace BloggerAPI.Controllers
             try
             {
                 Blog b = _context.Blogs.Find(id);
+                b.Title = blog.Title;
                 b.Description = blog.Description;
                 b.DateOfPublish = blog.DateOfPublish;
                 b.Type = blog.Type;

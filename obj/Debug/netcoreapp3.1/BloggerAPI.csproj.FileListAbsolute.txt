@@ -61,6 +61,7 @@ D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\log4net.dll
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.csproj.CoreCompileInputs.cache
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cache
