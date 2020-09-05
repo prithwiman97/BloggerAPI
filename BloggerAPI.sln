@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggerAPI", "BloggerAPI.csproj", "{7DB656A5-48A9-40FE-89D5-FEB64A906A85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloggerAPI", "BloggerAPI.csproj", "{7DB656A5-48A9-40FE-89D5-FEB64A906A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggerMVCClient", "..\BloggerMVCClient\BloggerMVCClient.csproj", "{3332011E-B8CE-4530-8986-EDB238AA1D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BloggerMVCClient", "..\BloggerMVCClient\BloggerMVCClient.csproj", "{3332011E-B8CE-4530-8986-EDB238AA1D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggerAPITestProject", "..\BloggerAPITestProject\BloggerAPITestProject.csproj", "{D828ECC9-CB3B-4470-88C7-F9A0E3F914E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3332011E-B8CE-4530-8986-EDB238AA1D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3332011E-B8CE-4530-8986-EDB238AA1D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3332011E-B8CE-4530-8986-EDB238AA1D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D828ECC9-CB3B-4470-88C7-F9A0E3F914E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D828ECC9-CB3B-4470-88C7-F9A0E3F914E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D828ECC9-CB3B-4470-88C7-F9A0E3F914E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D828ECC9-CB3B-4470-88C7-F9A0E3F914E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -62,6 +62,14 @@ D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.S
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\log4net.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\nunit.framework.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\nunit.engine.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.csproj.CoreCompileInputs.cache
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cache

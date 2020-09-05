@@ -20,16 +20,19 @@ namespace BloggerAPI.Controllers
         }
         // GET: api/<UsersController>
         [HttpGet]
-        public IEnumerable<Users> Get()
+        public IActionResult Get()
         {
-            return _context.Users.ToList();
+            return Ok(_context.Users.ToList());
         }
 
         // GET api/<UsersController>/abcd123
         [HttpGet("{username}")]
-        public Users Get(string username)
+        public IActionResult Get(string username)
         {
-            return _context.Users.Find(username);
+            Users user = _context.Users.Find(username);
+            if (user != null)
+                return Ok(user);
+            return BadRequest(user);
         }
 
         // POST api/<UsersController>

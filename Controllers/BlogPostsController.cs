@@ -51,10 +51,10 @@ namespace BloggerAPI.Controllers
         }
 
         // PUT api/<BlogPostsController>/5
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] BlogPost post)
+        [HttpPut("{blogId}")]
+        public IActionResult Put(int blogId, [FromBody] BlogPost post)
         {
-            BlogPost p = _context.BlogPosts.Find(id);
+            BlogPost p = _context.BlogPosts.Find(blogId);
             p.Title = post.Title;
             p.Content = post.Content;
             p.DateOfPublish = post.DateOfPublish;
@@ -72,12 +72,12 @@ namespace BloggerAPI.Controllers
         }
 
         // DELETE api/<BlogPostsController>/5
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpDelete("{blogId}")]
+        public IActionResult Delete(int blogId)
         {
             try
             {
-                _context.BlogPosts.Remove(_context.BlogPosts.Find(id));
+                _context.BlogPosts.Remove(_context.BlogPosts.Find(blogId));
                 _context.SaveChanges();
                 return Ok("Post deleted successfully");
             }
