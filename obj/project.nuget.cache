@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iqv/LGRoNU+U+eyZyzHbmndscdl198ZnHvJP6XBeOhxKDB5Ky9ZY2nVIy4kjsicf6vw6trwlm2wzfoKMeFKECw==",
+  "dgSpecHash": "Hx2AKEorKQqjqxWTo3bTSzeoQbFqlP4zeBVChtlQE3DIRycl3CSGg42vSRJXqXfSFV2fX9LGOVi0lz6sQMf8PQ==",
   "success": true,
   "projectFilePath": "D:\\ASP .net projects\\BloggerAPI\\BloggerAPI.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.extensions.logging\\3.1.7\\microsoft.extensions.logging.3.1.7.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.extensions.logging.log4net.aspnetcore\\3.1.0\\microsoft.extensions.logging.log4net.aspnetcore.3.1.0.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
@@ -142,6 +143,7 @@
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
+    "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Prithwi.PRITHWIMAN\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": []

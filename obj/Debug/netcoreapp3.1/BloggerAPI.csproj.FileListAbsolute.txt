@@ -70,6 +70,7 @@ D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+D:\ASP .net projects\BloggerAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.csproj.CoreCompileInputs.cache
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP .net projects\BloggerAPI\obj\Debug\netcoreapp3.1\BloggerAPI.MvcApplicationPartsAssemblyInfo.cache

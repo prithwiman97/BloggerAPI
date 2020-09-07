@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BloggerAPI.Models;
+using BloggerAPI.Repositories;
+using log4net;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,8 +15,9 @@ namespace BloggerAPI.Controllers
     [ApiController]
     public class CommentsController : ControllerBase
     {
-        private readonly BloggerContext _context;
-        public CommentsController(BloggerContext context)
+        ILog logger = LogManager.GetLogger(typeof(UsersController));
+        private readonly CommentRepository _context;
+        public CommentsController(CommentRepository context)
         {
             _context = context;
         }
@@ -22,69 +25,35 @@ namespace BloggerAPI.Controllers
         [HttpGet]
         public IEnumerable<Comment> Get()
         {
-            return _context.Comments.ToList();
+            return _context.Get();
         }
 
-        // GET api/<CommentsController>/5
+        // GET api/<CommentsController>/5  returns list of comments on a post with specified postId
         [HttpGet("{postId}")]
         public IEnumerable<Comment> Get(int postId)
         {
-            IEnumerable<Comment> comments = _context.Comments.ToList();
-            comments = from c in comments where c.PostId == postId select c;
-            return comments;
+            return _context.Get(postId);
         }
 
         // POST api/<CommentsController>
         [HttpPost]
-        public IActionResult Post([FromBody] Comment comment)
+        public string Post([FromBody] Comment comment)
         {
-            try
-            {
-                _context.Comments.Add(comment);
-                _context.SaveChanges();
-                return Ok("Comment added successfully");
-            }
-            catch(Exception e)
-            {
-                return BadRequest("Comment could not be added\n"+e);
-            }
+            return _context.Post(comment);
         }
 
         // PUT api/<CommentsController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Comment comment)
+        public string Put(int id, [FromBody] Comment comment)
         {
-            try
-            {
-                Comment c = _context.Comments.Find(id);
-                c.Content = comment.Content;
-                c.DateOfPublish = comment.DateOfPublish;
-                c.Username = comment.Username;
-                c.PostId = comment.PostId;
-                _context.Comments.Update(c);
-                _context.SaveChanges();
-                return Ok("Comment Updated");
-            }
-            catch (Exception e)
-            {
-                return BadRequest("Comment could not be updated\n" + e);
-            }
+            return _context.Put(id, comment);
         }
 
         // DELETE api/<CommentsController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public string Delete(int id)
         {
-            try
-            {
-                _context.Comments.Remove(_context.Comments.Find(id));
-                _context.SaveChanges();
-                return Ok("Comment deleted");
-            }
-            catch (Exception e)
-            {
-                return BadRequest("Comment could not be deleted\n" + e);
-            }
+            return _context.Delete(id);
         }
     }
 }

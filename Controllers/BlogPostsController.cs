@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BloggerAPI.Models;
+using BloggerAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,8 +14,8 @@ namespace BloggerAPI.Controllers
     [ApiController]
     public class BlogPostsController : ControllerBase
     {
-        private readonly BloggerContext _context;
-        public BlogPostsController(BloggerContext context)
+        private readonly BlogPostRepository _context;
+        public BlogPostsController(BlogPostRepository context)
         {
             _context = context;
         }
@@ -22,69 +23,38 @@ namespace BloggerAPI.Controllers
         [HttpGet]
         public IEnumerable<BlogPost> Get()
         {
-            return _context.BlogPosts.ToList();
+            return _context.Get();
         }
 
         // GET api/<BlogPostsController>/5
-        [HttpGet("{blogId}")]
-        public IEnumerable<BlogPost> Get(int blogId)
+        [HttpGet("{blogPostId}")]
+        public IActionResult Get(int blogPostId)
         {
-            IEnumerable<BlogPost> posts = _context.BlogPosts.ToList();
-            posts = from p in posts where p.BlogId == blogId select p;
-            return posts;
+            BlogPost post = _context.Get(blogPostId);
+            if (post == null)
+                return BadRequest(post);
+            return Ok(post);
         }
 
         // POST api/<BlogPostsController>
         [HttpPost]
-        public IActionResult Post([FromBody] BlogPost post)
+        public string Post([FromBody] BlogPost post)
         {
-            try
-            {
-                _context.BlogPosts.Add(post);
-                _context.SaveChanges();
-                return Ok("Blog Post Added");
-            }
-            catch(Exception e)
-            {
-                return BadRequest("Blog Post could not be added\n" + e);
-            }
+            return _context.Post(post);
         }
 
         // PUT api/<BlogPostsController>/5
-        [HttpPut("{blogId}")]
-        public IActionResult Put(int blogId, [FromBody] BlogPost post)
+        [HttpPut("{blogPostId}")]
+        public string Put(int blogPostId, [FromBody] BlogPost post)
         {
-            BlogPost p = _context.BlogPosts.Find(blogId);
-            p.Title = post.Title;
-            p.Content = post.Content;
-            p.DateOfPublish = post.DateOfPublish;
-            p.BlogId = post.BlogId;
-            try
-            {
-                _context.BlogPosts.Update(p);
-                _context.SaveChanges();
-                return Ok("Post updated successfully");
-            }
-            catch(Exception e)
-            {
-                return BadRequest("Post could not be updated\n" + e);
-            }
+            return _context.Put(blogPostId, post);
         }
 
         // DELETE api/<BlogPostsController>/5
-        [HttpDelete("{blogId}")]
-        public IActionResult Delete(int blogId)
+        [HttpDelete("{blogPostId}")]
+        public string Delete(int blogPostId)
         {
-            try
-            {
-                _context.BlogPosts.Remove(_context.BlogPosts.Find(blogId));
-                _context.SaveChanges();
-                return Ok("Post deleted successfully");
-            }
-            catch(Exception e)
-            {
-                return BadRequest("Post could not be deleted\n" + e);
-            }
+            return _context.Delete(blogPostId);
         }
     }
 }

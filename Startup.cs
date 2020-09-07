@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BloggerAPI.Models;
+using BloggerAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,10 @@ namespace BloggerAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<UsersRepository>();
+            services.AddScoped<BlogRepository>();
+            services.AddScoped<BlogPostRepository>();
+            services.AddScoped<CommentRepository>();
             services.AddControllers();
             services.AddDbContext<BloggerContext>(options =>
             {
@@ -37,7 +42,7 @@ namespace BloggerAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -49,6 +54,7 @@ namespace BloggerAPI
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "BloggerAPI v1");
             });
 
+            loggerFactory.AddLog4Net();
             app.UseHttpsRedirection();
 
             app.UseRouting();
