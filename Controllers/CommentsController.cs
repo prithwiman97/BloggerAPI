@@ -23,16 +23,16 @@ namespace BloggerAPI.Controllers
         }
         // GET: api/<CommentsController>
         [HttpGet]
-        public IEnumerable<Comment> Get()
+        public IActionResult Get()
         {
-            return _context.Get();
+            return Ok(_context.Get());
         }
 
         // GET api/<CommentsController>/5  returns list of comments on a post with specified postId
         [HttpGet("{postId}")]
-        public IEnumerable<Comment> Get(int postId)
+        public IActionResult Get(int postId)
         {
-            return _context.Get(postId);
+            return Ok(_context.Get(postId));
         }
 
         // POST api/<CommentsController>

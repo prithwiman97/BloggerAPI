@@ -21,9 +21,9 @@ namespace BloggerAPI.Controllers
         }
         // GET: api/<BlogPostsController>
         [HttpGet]
-        public IEnumerable<BlogPost> Get()
+        public IActionResult Get()
         {
-            return _context.Get();
+            return Ok(_context.Get());
         }
 
         // GET api/<BlogPostsController>/5
